@@ -23,74 +23,65 @@
     </header>
     <main class="container">
       <section>
-        <form class="">
-          <div class="row">
-            <div class="form-group col-md-6">
-              <label for="inputNombre">Nombre</label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputNombre"
-                placeholder="Maria"
-              />
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputApellido">Apellido</label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputApellido"
-                placeholder="Perez"
-              />
-            </div>
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="inputNombre" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputNombre"
+              placeholder="Maria"
+              required
+            />
           </div>
-          <div class="row my-3">
-            <div class="form-group col-md-4">
-              <label for="inputEdad">Edad</label>
-              <input
-                type="number"
-                class="form-control"
-                id="inputEdad"
-                placeholder="25"
-              />
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputDni">Numero de DNI</label>
-              <input
-                type="number"
-                class="form-control"
-                id="inputDni"
-                placeholder="45824635"
-              />
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputAnio">Año de Nacimiento</label>
-              <input
-                type="number"
-                class="form-control"
-                id="inputAnio"
-                placeholder="2003"
-              />
-            </div>
+          <div class="col-md-6">
+            <label for="inputApellido" class="form-label">Apellido</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputApellido"
+              placeholder="Perez"
+            />
           </div>
-
-          <div class="row">
-            <div class="form-group col-md-4">
-              <label for="inputSexo">Sexo</label>
-              <select id="inputSexo" class="form-control">
-                <option selected>Elegir opción...</option>
-                <option>M</option>
-                <option>F</option>
-              </select>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputPeso">Peso</label>
-              <input type="number" class="form-control" id="inputPeso" />
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputAltura">Altura (en cm)</label>
-              <input type="number" class="form-control" id="inputAltura" />
-            </div>
+          <div class="col-4">
+            <label for="inputEdad" class="form-label">Edad</label>
+            <input
+              type="number"
+              class="form-control"
+              id="inputEdad"
+              placeholder="25"
+              required
+            />
+          </div>
+          <div class="col-4">
+            <label for="inputDNI" class="form-label">DNI</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputDNI"
+              placeholder="45783621"
+            />
+          </div>
+          <div class="col-4">
+            <label for="inputSexo" class="form-label">Sexo</label>
+            <select id="inputSexo" class="form-select">
+              <option selected>Seleccionar...</option>
+              <option>H</option>
+              <option>M</option>
+            </select>
+          </div>
+          <div class="col-4">
+            <label for="inputPeso" class="form-label">Peso (en kg)</label>
+            <input type="number" class="form-control" id="inputPeso" />
+          </div>
+          <div class="col-4">
+            <label for="inputAltura" class="form-label">Altura (en cm)</label>
+            <input type="number" class="form-control" id="inputAltura" />
+          </div>
+          <div class="col-4">
+            <label for="inputAnioNacim" class="form-label">Año de nacimiento</label>
+            <input type="number" class="form-control" id="inputAnioNacim" required/>
+          </div>
           </div>
           <div class="text-center">
             <button type="button" class="btn btn-dark my-3">

@@ -1,7 +1,8 @@
 // Declaración clase persona
 class Persona {
-  constructor(nombre, edad, DNI, sexo, peso, altura, anioNacim) {
+  constructor(nombre, apellido, edad, DNI, sexo, peso, altura, anioNacim) {
     this.nombre = nombre;
+    this.apellido = apellido;
     this.edad = edad;
     this.DNI = DNI;
     this.sexo = sexo;
@@ -48,6 +49,7 @@ class Persona {
     document.write(`<br>
     <ul>
     <li>Nombre: ${this.nombre}</li>
+    <li>Apellido: ${this.apellido}</li>
     <li>Edad: ${this.edad}</li>
     <li>DNI: ${this.dni}</li>
     <li>Sexo: ${this.sexo}</li>
