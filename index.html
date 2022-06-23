@@ -79,12 +79,25 @@
             <input type="number" class="form-control" id="inputAltura" />
           </div>
           <div class="col-4">
-            <label for="inputAnioNacim" class="form-label">Año de nacimiento</label>
-            <input type="number" class="form-control" id="inputAnioNacim" required/>
+            <label for="inputAnioNacim" class="form-label"
+              >Año de nacimiento</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="inputAnioNacim"
+              required
+            />
           </div>
-          </div>
+          <button type="submit" class="btn btn-dark" onclick="nuevaPersona()">
+            Enviar
+          </button>
           <div class="text-center">
-            <button type="button" class="btn btn-dark my-3">
+            <button
+              type="button"
+              class="btn btn-dark my-3"
+              onclick="generacion()"
+            >
               Mostrar generación
             </button>
             <button type="button" class="btn btn-dark my-3">
@@ -93,6 +106,7 @@
           </div>
         </form>
       </section>
+      <div class="alert alert-info d-none" role="alert" id="alertMensaje"></div>
     </main>
     <footer class="bg-dark text-center text-light py-4">
       <p class="my-0">&copy; Todos los derechos reservados</p>

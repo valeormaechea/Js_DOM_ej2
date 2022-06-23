@@ -1,3 +1,5 @@
+let alerta = document.getElementById("alertMensaje");
+
 // Declaración clase persona
 class Persona {
   constructor(nombre, apellido, edad, DNI, sexo, peso, altura, anioNacim) {
@@ -13,6 +15,7 @@ class Persona {
   }
 
   mostrarGeneracion() {
+    this.anioNacim = document.getElementById(inputAnioNacim);
     let caracteristica;
     if (this.anioNacim < 1949) {
       this.generacion = "Silent Generation";
@@ -31,8 +34,15 @@ class Persona {
       caracteristica = "irreverencia.";
     }
 
-    document.write(`Pertenece a la generación "${this.generacion}", cuya
-            caracteristica principal es: ${caracteristica}<BR>`);
+    console.log(this.generacion);
+    console.log(caracteristica);
+    alerta.innerHTML(
+      `Pertenece a la generación ${this.generacion}, cuya caracteristica principal es ${caracteristica}.`
+    );
+    alerta.className(`alert alert-info`);
+
+    // alert.(`Pertenece a la generación "${this.generacion}", cuya
+    //         caracteristica principal es: ${caracteristica}<BR>`);
   }
 
   // Metodo para determinar si la persona es mayor de edad y emitir mensaje
@@ -60,39 +70,29 @@ class Persona {
     </ul>
     `);
   }
- 
-  // Setters
-  set setNombre(nombre) {
-    this.nombre = nombre;
-  }
-
-  set setApellido(apellido) {
-    this.apellido = apellido;
-  }
-
-  set setEdad(edad) {
-    this.edad = edad;
-  }
-
-  set setSexo(sexo) {
-    this.sexo = sexo;
-  }
-
-  set setDni(DNI) {
-    this.DNI = DNI;
-  }
-
-  set setPeso(peso) {
-    this.peso = peso;
-  }
-
-  set setAltura(altura) {
-    this.altura = altura;
-  }
-
-  set setAnioNacim(anioNacim){
-    this.anioNacim=anioNacim;
-  }
-
-  
 }
+
+function nuevaPersona() {
+  let nombre = document.getElementById(inputNombre);
+  let apellido = document.getElementById(inputApellido);
+  let edad = document.getElementById(inputEdad);
+  let dni = document.getElementById(inputDNI);
+  let sexo = document.getElementById(inputSexo);
+  let peso = document.getElementById(inputPeso);
+  let altura = document.getElementById(inputAltura);
+  let anioNacim = document.getElementById(inputAnioNacim);
+  let persona = new Persona(
+    nombre,
+    apellido,
+    edad,
+    dni,
+    sexo,
+    peso,
+    altura,
+    anioNacim
+  );
+}
+
+function generacion() {}
+
+function mayoriaEdad() {}
